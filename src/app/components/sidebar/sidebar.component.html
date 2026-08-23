@@ -3,4 +3,17 @@
         ✏️ Scrie email
     </button>
 
+
+
+    <nav class="folder-list">
+        @for (folder of folders; track folder.id) {
+        <button class="folder-item" [class.active]="activeFolder() === folder.id" (click)="selectFolder(folder.id)">
+            <span class="icon">{{ folder.icon }}</span>
+            <span class="label">{{ folder.label }}</span>
+            @if (folder.count) {
+            <span class="badge">{{ folder.count }}</span>
+            }
+        </button>
+        }
+    </nav>
 </aside>
