@@ -2,7 +2,8 @@
     position: fixed;
     bottom: 0;
     right: 24px;
-    width: 380px;
+    width: 600px;
+    max-height: 85vh;
     background: #FFFFFF;
     border: 1px solid #E8E4DB;
     border-bottom: none;
@@ -57,7 +58,8 @@
 .compose-textarea {
     border: none;
     resize: none;
-    height: 160px;
+    flex: 1;
+    min-height: 400px;
     font-size: 13px;
     font-family: inherit;
     outline: none;
