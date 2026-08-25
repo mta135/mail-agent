@@ -28,6 +28,8 @@
 .search-box {
     flex: 1;
     max-width: 480px;
+    margin-left: 35px;
+    position: relative;
 }
 
 .search-box input {
