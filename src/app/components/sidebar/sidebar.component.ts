@@ -13,6 +13,8 @@ export class SidebarComponent {
   activeFolder = signal<string | null>("inbox");
   composeService = inject(ComposeService);
 
+  foldersExpanded = signal<boolean>(true);
+
 
   folders: Folder[] = [
     { id: 'inbox', label: 'Inbox', icon: 'fa-solid fa-inbox', count: 4 },
@@ -24,6 +26,10 @@ export class SidebarComponent {
 
   selectFolder(id: string): void {
     this.activeFolder.set(id);
+  }
+
+  toggleFolders(): void {
+    this.foldersExpanded.update(value => !value);
   }
 
 }

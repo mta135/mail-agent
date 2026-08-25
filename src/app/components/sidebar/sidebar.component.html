@@ -4,17 +4,24 @@
         Scrie email
     </button>
 
-    <span class="section-label">Foldere</span>
+    <button class="section-label" (click)="toggleFolders()">
+        <span>Foldere</span>
+        <i class="fa-solid fa-chevron-down chevron" [class.rotated]="foldersExpanded()"></i>
+    </button>
 
-    <nav class="folder-list">
+
+    <div class="dropdown-container" [class.open]="foldersExpanded()">
+
         @for (folder of folders; track folder.id) {
+
         <button class="folder-item" [class.active]="activeFolder() === folder.id" (click)="selectFolder(folder.id)">
             <i class="icon" [class]="folder.icon"></i>
             <span class="label">{{ folder.label }}</span>
             @if (folder.count) {
             <span class="badge">{{ folder.count }}</span>
             }
+
         </button>
         }
-    </nav>
+    </div>
 </aside>

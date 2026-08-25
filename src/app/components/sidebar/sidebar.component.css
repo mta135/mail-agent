@@ -12,7 +12,7 @@
 }
 
 .compose-btn {
-    background: #6B7FE0;
+    background: #214386;
     color: #FFFFFF;
     border: none;
     border-radius: 10px;
@@ -30,7 +30,7 @@
 }
 
 .compose-btn:hover {
-    background: #7C8DE8;
+    background: #0b2099;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(59, 130, 196, 0.45);
 }
@@ -40,19 +40,38 @@
 }
 
 .section-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #214386;
+    cursor: pointer;
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
-    color: #A0A8B8;
-    padding: 0 12px;
-    margin-bottom: 10px;
+    color: #214386;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    transition: color 0.15s ease, background 0.15s ease;
+    font-family: inherit;
 }
 
-.folder-list {
+.dropdown-container {
     display: flex;
     flex-direction: column;
     gap: 2px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.dropdown-container.open {
+    max-height: 300px;
+    opacity: 1;
 }
 
 .folder-item {
@@ -62,7 +81,7 @@
     gap: 12px;
     background: transparent;
     border: none;
-    color: #5C6579;
+    color: #0a101d;
     padding: 10px 12px;
     border-radius: 8px;
     cursor: pointer;
@@ -78,7 +97,7 @@
 }
 
 .folder-item.active {
-    background: rgba(107, 127, 224, 0.10);
+    background: rgba(22, 44, 151, 0.1);
     color: #4A5FC8;
     font-weight: 600;
 }
