@@ -1,0 +1,23 @@
+@if (composeService.isOpen()) {
+<div class="compose-window">
+    <div class="compose-header">
+        <span>Mesaj nou</span>
+        <button class="close-btn" (click)="composeService.close()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <div class="compose-body">
+        <input type="text" placeholder="Către" class="compose-field">
+        <input type="text" placeholder="Subiect" class="compose-field">
+        <textarea placeholder="Scrie mesajul aici..." class="compose-textarea"></textarea>
+    </div>
+
+    <div class="compose-footer">
+        <button class="send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+            Trimite
+        </button>
+    </div>
+</div>
+}

@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { Folder } from '../../models/folder.model';
+import { ComposeService } from '../../services/compose.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,6 +11,7 @@ import { Folder } from '../../models/folder.model';
 export class SidebarComponent {
 
   activeFolder = signal<string | null>("inbox");
+  composeService = inject(ComposeService);
 
 
   folders: Folder[] = [
