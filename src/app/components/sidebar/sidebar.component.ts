@@ -13,12 +13,11 @@ export class SidebarComponent {
 
 
   folders: Folder[] = [
-    { id: 'inbox', label: 'Inbox', icon: '📥', count: 4 },
-    { id: 'sent', label: 'Trimise', icon: '📤' },
-    { id: 'drafts', label: 'Ciorne', icon: '📝', count: 1 },
-    { id: 'trash', label: 'Coș de gunoi', icon: '🗑️' },
+    { id: 'inbox', label: 'Inbox', icon: 'fa-solid fa-inbox', count: 4 },
+    { id: 'sent', label: 'Trimise', icon: 'fa-solid fa-paper-plane' },
+    { id: 'drafts', label: 'Ciorne', icon: 'fa-solid fa-file-lines', count: 1 },
+    { id: 'trash', label: 'Coș de gunoi', icon: 'fa-solid fa-trash' },
   ];
-
 
 
   selectFolder(id: string): void {

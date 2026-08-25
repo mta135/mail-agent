@@ -70,3 +70,10 @@
     padding: 2px 7px;
     border-radius: 10px;
 }
+
+
+.icon {
+    width: 16px;
+    text-align: center;
+    font-size: 14px;
+}

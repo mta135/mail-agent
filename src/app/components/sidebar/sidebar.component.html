@@ -1,14 +1,13 @@
 <aside class="sidebar">
     <button class="compose-btn">
-        ✏️ Scrie email
+        <i class="fa-solid fa-pen-to-square"></i>
+        Scrie email
     </button>
-
-
 
     <nav class="folder-list">
         @for (folder of folders; track folder.id) {
         <button class="folder-item" [class.active]="activeFolder() === folder.id" (click)="selectFolder(folder.id)">
-            <span class="icon">{{ folder.icon }}</span>
+            <i class="icon" [class]="folder.icon"></i>
             <span class="label">{{ folder.label }}</span>
             @if (folder.count) {
             <span class="badge">{{ folder.count }}</span>

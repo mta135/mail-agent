@@ -1,12 +1,19 @@
+.app-shell {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
 .layout {
     display: flex;
-    height: 100vh;
+    flex: 1;
+    min-height: 0;
+    /* important, altfel conținutul din interior poate depăși înălțimea */
 }
 
 .content {
     flex: 1;
-    background: #fff;
+    background: #FAF8F4;
     padding: 24px;
-    ;
     overflow-y: auto;
 }
