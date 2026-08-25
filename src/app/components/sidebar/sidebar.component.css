@@ -4,7 +4,7 @@
     background: #FFFFFF;
     border-right: 1px solid #E8E4DB;
     color: #2E3A4E;
-    padding: 20px 12px;
+    padding: 24px 16px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -15,65 +15,110 @@
     background: #6B7FE0;
     color: #FFFFFF;
     border: none;
-    border-radius: 8px;
-    padding: 12px 16px;
+    border-radius: 10px;
+    padding: 13px 18px;
     font-weight: 600;
     font-size: 14px;
+    letter-spacing: 0.2px;
     cursor: pointer;
-    margin-bottom: 24px;
-    transition: transform 0.15s ease, background 0.15s ease;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 8px rgba(59, 130, 196, 0.35);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 }
 
 .compose-btn:hover {
-    background: #8093E8;
+    background: #7C8DE8;
     transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 196, 0.45);
+}
+
+.compose-btn:active {
+    transform: translateY(0);
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #A0A8B8;
+    padding: 0 12px;
+    margin-bottom: 10px;
 }
 
 .folder-list {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
 }
 
 .folder-item {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: transparent;
     border: none;
-    color: #6B7280;
+    color: #5C6579;
     padding: 10px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 14px;
     text-align: left;
     font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .folder-item:hover {
-    background: #eef0f5;
+    background: #F5F6FA;
     color: #2E3A4E;
 }
 
 .folder-item.active {
     background: rgba(107, 127, 224, 0.10);
-    color: #6B7FE0;
+    color: #4A5FC8;
     font-weight: 600;
+}
+
+.folder-item.active::before {
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    background: #6B7FE0;
+    border-radius: 0 3px 3px 0;
+    background: #3B82C4;
+}
+
+.icon {
+    width: 18px;
+    text-align: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.folder-item.active .icon {
+    color: #3B82C4;
 }
 
 .badge {
     margin-left: auto;
-    background: #6B7FE0;
+    background: #3B82C4;
     color: #FFFFFF;
     font-size: 11px;
     font-weight: 700;
-    padding: 2px 7px;
+    padding: 2px 8px;
     border-radius: 10px;
+    min-width: 8px;
+    text-align: center;
 }
 
-
-.icon {
-    width: 16px;
-    text-align: center;
-    font-size: 14px;
+.folder-item.active .badge {
+    background: #2E6DA8;
 }

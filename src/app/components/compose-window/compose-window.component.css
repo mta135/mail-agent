@@ -8,7 +8,7 @@
     border: 1px solid #E8E4DB;
     border-bottom: none;
     border-radius: 10px 10px 0 0;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 8px rgba(59, 130, 196, 0.35);
     display: flex;
     flex-direction: column;
     font-family: system-ui, sans-serif;
@@ -86,5 +86,5 @@
 }
 
 .send-btn:hover {
-    background: #8093E8;
+    box-shadow: 0 4px 12px rgba(59, 130, 196, 0.45);
 }

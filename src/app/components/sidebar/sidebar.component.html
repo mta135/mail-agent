@@ -4,6 +4,8 @@
         Scrie email
     </button>
 
+    <span class="section-label">Foldere</span>
+
     <nav class="folder-list">
         @for (folder of folders; track folder.id) {
         <button class="folder-item" [class.active]="activeFolder() === folder.id" (click)="selectFolder(folder.id)">
