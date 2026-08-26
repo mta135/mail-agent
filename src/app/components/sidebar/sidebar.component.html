@@ -24,4 +24,23 @@
         </button>
         }
     </div>
+
+
+
+
+    <button class="section-label" (click)="toggleLabels()">
+        <span>Etichete</span>
+        <i class="fa-solid fa-chevron-down chevron" [class.rotated]="labelsExpanded()"></i>
+    </button>
+
+    <div class="dropdown-container" [class.open]="labelsExpanded()">
+        @for (label of labels; track label.id) {
+        <button class="folder-item" [class.active]="activeLabel() === label.id" (click)="selectLabel(label.id)">
+            <span class="label-dot" [style.background]="label.color"></span>
+            <span class="label">{{ label.name }}</span>
+        </button>
+        }
+    </div>
+
+
 </aside>
