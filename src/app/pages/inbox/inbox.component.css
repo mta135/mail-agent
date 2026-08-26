@@ -1,0 +1,104 @@
+.inbox {
+    font-family: system-ui, sans-serif;
+}
+
+.inbox-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2E3A4E;
+    margin-bottom: 16px;
+}
+
+.mail-list {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #E8E4DB;
+    overflow: hidden;
+}
+
+.mail-item {
+    display: flex;
+    gap: 14px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #F0EDE6;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.mail-item:last-child {
+    border-bottom: none;
+}
+
+.mail-item:hover {
+    background: #FAF8F4;
+}
+
+.mail-item.unread {
+    background: #F5F8FD;
+}
+
+.mail-item.unread .mail-from,
+.mail-item.unread .mail-subject {
+    font-weight: 700;
+    color: #1A2332;
+}
+
+.mail-avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #3B82C4;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.mail-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.mail-top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.mail-from {
+    font-size: 14px;
+    color: #2E3A4E;
+    font-weight: 500;
+}
+
+.mail-date {
+    font-size: 12px;
+    color: #9098A8;
+    flex-shrink: 0;
+}
+
+.mail-subject {
+    font-size: 13.5px;
+    color: #4A5568;
+    margin-bottom: 2px;
+}
+
+.mail-preview {
+    font-size: 13px;
+    color: #9098A8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.empty-state {
+    padding: 40px;
+    text-align: center;
+    color: #9098A8;
+    font-size: 14px;
+}

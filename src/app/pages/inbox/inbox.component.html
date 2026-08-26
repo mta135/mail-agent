@@ -1,1 +1,21 @@
-<p>inbox works!</p>
+<div class="inbox">
+    <h2 class="inbox-title">Inbox</h2>
+
+    <div class="mail-list">
+        @for (mail of inboxMails(); track mail.id) {
+        <div class="mail-item" [class.unread]="!mail.read">
+            <div class="mail-avatar">{{ mail.from.charAt(0) }}</div>
+            <div class="mail-info">
+                <div class="mail-top-row">
+                    <span class="mail-from">{{ mail.from }}</span>
+                    <span class="mail-date">{{ mail.date | date: 'dd MMM' }}</span>
+                </div>
+                <div class="mail-subject">{{ mail.subject }}</div>
+                <div class="mail-preview">{{ mail.body }}</div>
+            </div>
+        </div>
+        } @empty {
+        <p class="empty-state">Nu ai emailuri în Inbox.</p>
+        }
+    </div>
+</div>

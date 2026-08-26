@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { Folder } from '../../models/folder.model';
 import { ComposeService } from '../../services/compose.service';
 import { MailLabel } from '../../models/mail.label.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -19,6 +20,8 @@ export class SidebarComponent {
 
   foldersExpanded = signal<boolean>(true);
   labelsExpanded = signal<boolean>(false);
+
+  private router = inject(Router);
 
 
   folders: Folder[] = [
@@ -41,6 +44,10 @@ export class SidebarComponent {
   selectFolder(id: string): void {
     this.activeFolder.set(id);
     this.activeLabel.set(null);
+
+    if (id === 'inbox') {
+      this.router.navigate(['/inbox']);
+    }
   }
 
 
