@@ -8,7 +8,18 @@
     </div>
 
     <div class="compose-body">
-        <input type="text" placeholder="Către" class="compose-field">
+        <div class="recipients-field">
+            @for (recipient of recipients(); track recipient; let i = $index) {
+            <span class="recipient-chip">
+                {{ recipient }}
+                <button class="chip-remove" (click)="removeRecipient(i)">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </span>
+            }
+            <input type="text" class="recipient-input" placeholder="{{ recipients().length === 0 ? 'Către' : '' }}"
+                [(ngModel)]="currentRecipientInput" (keydown)="onRecipientKeydown($event)" (blur)="addRecipient()">
+        </div>
         <input type="text" placeholder="Subiect" class="compose-field">
         <textarea placeholder="Scrie mesajul aici..." class="compose-textarea"></textarea>
 
