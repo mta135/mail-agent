@@ -69,6 +69,75 @@
 .compose-footer {
     padding: 10px 14px;
     border-top: 1px solid #E8E4DB;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.attach-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    color: #6B7280;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.attach-btn:hover {
+    background: #F5F3EE;
+}
+
+.attachment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.attachment-chip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #F5F3EE;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12.5px;
+    color: #3D4759;
+}
+
+.attachment-chip i.fa-paperclip {
+    color: #9098A8;
+    font-size: 11px;
+}
+
+.attachment-name {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.attachment-size {
+    color: #9098A8;
+    font-size: 11.5px;
+    flex-shrink: 0;
+}
+
+.attachment-remove {
+    background: transparent;
+    border: none;
+    color: #9098A8;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 2px 4px;
+    flex-shrink: 0;
+}
+
+.attachment-remove:hover {
+    color: #D14D4D;
 }
 
 .send-btn {
